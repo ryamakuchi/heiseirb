@@ -17,5 +17,3 @@ describe "String#to_kaibun" do
   it{ expect( 'NONO*'.to_kaibun ).to eq('NONON') }
   it{ expect( 'N*N*O*'.to_kaibun ).to eq('NONNON') }
 end
-
-
