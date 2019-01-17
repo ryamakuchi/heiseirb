@@ -4,11 +4,10 @@ class String
   PALINDROME_ERROR = '回文には出来ません'
 
   def to_kaibun
-    half_number = self.length.div(2)
     self.upcase!
 
     return UNSUPPORTED_ERROR if self.match(/[^NO\*]/)
-    return UNSUPPORTED_ERROR if (self.length.odd?) && (self[half_number] == '*')
+    return UNSUPPORTED_ERROR if (self.length.odd?) && (self[self.length.div(2)] == '*')
     if self.index('*')
       while (asterisk_number = self.index('*')) != nil do
         asterisk_string = self.reverse[self.index('*')]
